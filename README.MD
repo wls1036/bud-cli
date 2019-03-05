@@ -1,4 +1,4 @@
-## introduce
+## Introduce
 
 cli tool for bud to generate project template and components.
 
