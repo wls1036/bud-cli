@@ -1,6 +1,6 @@
 ## Introduce
 
-cli tool for bud to generate project template and components.
+CLI tool for bud to generate project template and components.
 
 ## Contributor
 
