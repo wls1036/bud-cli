@@ -1,12 +1,5 @@
 package org.bud.cli.component;
 
-import org.bud.cli.parser.component.ButtonGroupParser;
-import org.bud.cli.parser.component.ColumnsParser;
-import org.bud.cli.parser.component.FormParser;
-import org.bud.cli.parser.component.TableParser;
-
-import java.util.List;
-
 /**
  * @Copyright: Shanghai Definesys Company.All rights reserved.
  * @Description:

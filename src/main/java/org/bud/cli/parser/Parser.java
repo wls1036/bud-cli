@@ -74,7 +74,7 @@ public class Parser {
                     tmp.clear();
                 }
                 type = line.substring(1);
-                match = !match;
+                match = true;
                 continue;
             }
             tmp.add(line);
