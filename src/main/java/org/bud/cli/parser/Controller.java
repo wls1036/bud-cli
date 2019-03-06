@@ -2,7 +2,7 @@ package org.bud.cli.parser;
 
 import com.alibaba.fastjson.JSON;
 import org.bud.cli.component.Page;
-import org.bud.cli.parser.component.MenuParser;
+import org.bud.cli.parser.component.*;
 
 /**
  * @Copyright: Shanghai Definesys Company.All rights reserved.
@@ -27,5 +27,17 @@ public class Controller {
         ParserRegistry registry = ParserRegistry.getInstance();
         registry.registry("菜单", new MenuParser());
         registry.registry("menu", new MenuParser());
+        registry.registry("查询页", new QueryPageParser());
+        registry.registry("QueryPage", new QueryPageParser());
+        registry.registry("表格", new TableParser());
+        registry.registry("Table", new TableParser());
+
+        registry.registry("列", new ColumnsParser());
+        registry.registry("Col", new ColumnsParser());
+        registry.registry("Column", new ColumnsParser());
+        registry.registry("按钮", new ButtonGroupParser());
+        registry.registry("Button", new ButtonGroupParser());
+        registry.registry("表单", new FormParser());
+        registry.registry("Form", new FormParser());
     }
 }

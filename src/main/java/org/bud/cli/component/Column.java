@@ -11,7 +11,7 @@ package org.bud.cli.component;
 public class Column {
     private String name;
     private String code;
-    private String type;
+    private String type="string";
     private Boolean key;
 
     public String getName() {
@@ -44,5 +44,9 @@ public class Column {
 
     public void setKey(Boolean key) {
         this.key = key;
+    }
+
+    public void setKey(String key) {
+        this.key = "true".equalsIgnoreCase(key);
     }
 }

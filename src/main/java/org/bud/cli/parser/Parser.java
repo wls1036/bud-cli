@@ -72,15 +72,14 @@ public class Parser {
                 if (match) {
                     p.addComponent(this.parseComponent(type, tmp));
                     tmp.clear();
-                } else {
-                    type = line.substring(1);
                 }
+                type = line.substring(1);
                 match = !match;
                 continue;
             }
             tmp.add(line);
         }
-        if (match) {
+        if (tmp.size() > 0) {
             p.addComponent(this.parseComponent(type, tmp));
         }
         return p;
