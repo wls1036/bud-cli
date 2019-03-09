@@ -15,10 +15,6 @@ public class Table extends Component {
     private String page = "page";
     private Columns columns;
 
-    @Override
-    public String getType() {
-        return null;
-    }
 
     public String getSelection() {
         return selection;

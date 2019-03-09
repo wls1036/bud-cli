@@ -12,4 +12,8 @@ public class BudException extends RuntimeException {
     public BudException(String msg){
         super(msg);
     }
+
+    public BudException(Throwable ex){
+
+    }
 }

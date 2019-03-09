@@ -14,10 +14,6 @@ import java.util.List;
 public class Menu extends Component{
     private List<MenuItem> menuItems=new ArrayList<>();
 
-    @Override
-    public String getType() {
-        return null;
-    }
 
     public List<MenuItem> getMenuItems() {
         return menuItems;

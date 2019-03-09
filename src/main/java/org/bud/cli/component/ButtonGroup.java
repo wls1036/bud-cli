@@ -25,8 +25,4 @@ public class ButtonGroup extends Component{
         this.buttons.add(button);
     }
 
-    @Override
-    public String getType() {
-        return null;
-    }
 }

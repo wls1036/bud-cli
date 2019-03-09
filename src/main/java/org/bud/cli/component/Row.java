@@ -1,6 +1,8 @@
 package org.bud.cli.component;
 
-import com.sun.tools.javac.util.List;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Copyright: Shanghai Definesys Company.All rights reserved.
@@ -10,13 +12,17 @@ import com.sun.tools.javac.util.List;
  * @history: 1.2019/3/5 created by jianfeng.zheng
  */
 public class Row {
-    private List<Col> cols;
+    private List<Component> components = new ArrayList<>();
 
-    public List<Col> getCols() {
-        return cols;
+    public List<Component> getComponents() {
+        return components;
     }
 
-    public void setCols(List<Col> cols) {
-        this.cols = cols;
+    public void setComponents(List<Component> components) {
+        this.components = components;
+    }
+
+    public void addComponent(Component component) {
+        components.add(component);
     }
 }

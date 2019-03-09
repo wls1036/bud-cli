@@ -25,8 +25,4 @@ public class Columns extends Component{
         columns.add(column);
     }
 
-    @Override
-    public String getType() {
-        return null;
-    }
 }

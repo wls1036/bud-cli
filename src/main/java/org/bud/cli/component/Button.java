@@ -8,17 +8,9 @@ package org.bud.cli.component;
  * @history: 1.2019/3/5 created by jianfeng.zheng
  */
 public class Button extends Component{
-    private String name;
     private String actionCode;
     private String icon;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getActionCode() {
         return actionCode;
@@ -34,10 +26,5 @@ public class Button extends Component{
 
     public void setIcon(String icon) {
         this.icon = icon;
-    }
-
-    @Override
-    public String getType() {
-        return null;
     }
 }

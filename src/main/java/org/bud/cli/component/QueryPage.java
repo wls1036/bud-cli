@@ -31,11 +31,6 @@ public class QueryPage extends Component {
     }
 
 
-    @Override
-    public String getType() {
-        return null;
-    }
-
     public Component getTable() {
         return table;
     }

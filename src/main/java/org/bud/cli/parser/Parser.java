@@ -68,6 +68,9 @@ public class Parser {
         boolean match = false;
         for (int i = 0; i < lines.size(); ++i) {
             String line = lines.get(i);
+            if (line == null || line.trim().length() == 0||line.startsWith("--")) {
+                continue;
+            }
             if (BudUtil.isComponent(line)) {
                 if (match) {
                     p.addComponent(this.parseComponent(type, tmp));

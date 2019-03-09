@@ -22,8 +22,8 @@ public class Form extends Component {
         this.rows = rows;
     }
 
-    @Override
-    public String getType() {
-        return null;
+
+    public void addRow(Row row){
+        this.rows.add(row);
     }
 }
