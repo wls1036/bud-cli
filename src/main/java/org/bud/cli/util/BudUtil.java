@@ -1,5 +1,10 @@
 package org.bud.cli.util;
 
+import org.bud.cli.exception.BudException;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.lang.reflect.Method;
 
 /**
@@ -25,6 +30,7 @@ public class BudUtil {
 
     /**
      * 动态赋值
+     *
      * @param clazz
      * @param field
      * @param value
@@ -36,5 +42,19 @@ public class BudUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static String readTemplateText(File f) {
+        String content = "";
+        try {
+            FileInputStream fin = new FileInputStream(f);
+            byte[] data = new byte[fin.available()];
+            fin.read(data);
+            fin.close();
+            content = new String(data, "UTF-8");
+        } catch (Exception e) {
+           throw new BudException(e.getMessage());
+        }
+        return content;
     }
 }
