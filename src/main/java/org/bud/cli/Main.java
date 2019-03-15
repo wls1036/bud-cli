@@ -27,7 +27,10 @@ public class Main {
 //        Controller controller = new Controller();
 //        controller.run();
 
-        Main.test01();
+//        Main.test01();
+
+        BudTemplateEngine e=new BudTemplateEngine();
+        e.evaluateFromZip("m.zip","bb");
     }
 
     public static void templateEngine() {

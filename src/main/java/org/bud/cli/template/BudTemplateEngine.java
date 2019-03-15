@@ -5,14 +5,15 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.runtime.RuntimeConstants;
 import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
+import org.bud.cli.exception.BudException;
 import org.bud.cli.util.BudUtil;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 /**
  * @Copyright: Shanghai Definesys Company.All rights reserved.
@@ -23,9 +24,11 @@ import java.util.Map;
  */
 public class BudTemplateEngine {
 
+    public static final int BUFFER_SIZE = 1024;
+
     private VelocityEngine engine;
 
-    private Map<String, Object> engineData;
+    private Map<String, Object> engineData = new HashMap<>();
 
     private String basePath;
 
@@ -37,6 +40,7 @@ public class BudTemplateEngine {
 
     /**
      * 设置上下文数据
+     *
      * @param data
      */
     public void setEngineData(Object data) {
@@ -45,6 +49,7 @@ public class BudTemplateEngine {
 
     /**
      * 将文件夹里的模板生成
+     *
      * @param from
      */
     public void evaluateFromPath(String from) {
@@ -54,6 +59,7 @@ public class BudTemplateEngine {
 
     /**
      * 将文件夹里的模板生成
+     *
      * @param from
      * @param to
      */
@@ -79,6 +85,7 @@ public class BudTemplateEngine {
 
     /**
      * 将模板file转换为to
+     *
      * @param file
      * @param to
      */
@@ -88,11 +95,11 @@ public class BudTemplateEngine {
         String toFile = this.getTargetFileName(file.getPath(), to);
         String tpl = BudUtil.readTemplateText(file);
         this.evaluate(tpl, this.engineData, toFile);
-
     }
 
     /**
      * 获取生成的文件名
+     *
      * @param from
      * @param to
      * @return
@@ -108,12 +115,61 @@ public class BudTemplateEngine {
         return t;
     }
 
+
+    /**
+     * 从压缩文件中解压出文件
+     *
+     * @param zipName
+     */
     public void evaluateFromZip(String zipName) {
+        String to = System.getProperty("user.dir");
+        this.evaluateFromZip(zipName, to);
+    }
+
+    /**
+     * 从资源zip文件中读取模板信息
+     *
+     * @param zipName
+     * @param to
+     */
+    public void evaluateFromZip(String zipName, String to) {
+        InputStream fin = ClassLoader.getSystemResourceAsStream(zipName);
+        this.evaluateFromZip(fin, to);
 
     }
 
-    public void evaluateFromZip(String zipName, String to) {
-
+    /**
+     * 从输入流中读取文件
+     * @param fin
+     * @param to
+     */
+    public void evaluateFromZip(InputStream fin, String to) {
+        ZipInputStream zin = new ZipInputStream(fin);
+        ZipEntry ze = null;
+        basePath = "";
+        try {
+            byte[] buf = new byte[BUFFER_SIZE];
+            while ((ze = zin.getNextEntry()) != null) {
+                System.out.println(ze.getName() + zin.available());
+                if (ze.isDirectory()) {
+                    continue;
+                }
+                String name = ze.getName();
+                name = "/" + name;
+                ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                int size = 0;
+                while ((size = zin.read(buf)) != -1) {
+                    bos.write(buf, 0, size);
+                }
+                String s = bos.toString("utf-8");
+                String fileName = this.getTargetFileName(name, to);
+                this.evaluate(s, this.engineData, fileName);
+            }
+            zin.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new BudException(e);
+        }
     }
 
     /**
@@ -171,7 +227,7 @@ public class BudTemplateEngine {
             FileWriter writer = new FileWriter(output);
             engine.evaluate(context, writer, "bud", tpl);
             writer.close();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
