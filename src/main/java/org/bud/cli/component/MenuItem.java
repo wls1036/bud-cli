@@ -11,10 +11,26 @@ import java.util.List;
  * @history: 1.2019/3/5 created by jianfeng.zheng
  */
 public class MenuItem extends Component {
+    /**
+     * 标题
+     */
     private String title;
+    /**
+     * 路由的路径
+     */
     private String router;
+    /**
+     * 图标
+     */
     private String icon;
-    private String type = "component";
+    /**
+     * 展示类型
+     */
+    private String showType = "item";
+    /**
+     * 打开类型
+     */
+    private String target;
 
     private List<MenuItem> menuItems = new ArrayList<>();
 
@@ -38,7 +54,7 @@ public class MenuItem extends Component {
     public void setRouter(String router) {
         this.router = router;
         if (router.startsWith("http://")) {
-            type = "link";
+            target = "link";
         }
     }
 
@@ -62,7 +78,19 @@ public class MenuItem extends Component {
         this.menuItems.add(menuItem);
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public String getShowType() {
+        return showType;
+    }
+
+    public void setShowType(String showType) {
+        this.showType = showType;
+    }
+
+    public String getTarget() {
+        return target;
+    }
+
+    public void setTarget(String target) {
+        this.target = target;
     }
 }

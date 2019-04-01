@@ -1,8 +1,12 @@
 package org.bud.cli.parser;
 
 import com.alibaba.fastjson.JSON;
+import org.bud.cli.component.Application;
 import org.bud.cli.component.Page;
 import org.bud.cli.parser.component.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Copyright: Shanghai Definesys Company.All rights reserved.
@@ -13,14 +17,15 @@ import org.bud.cli.parser.component.*;
  */
 public class Controller {
 
-    public void run() {
+    public Object run() {
         this.registComponentParser();
         PageFile pf = Reader.readFile("/Users/asan/workspace/ermei/menu.bud");
         Parser parser = new Parser(pf);
         Page page = parser.parseSinglePage();
-        System.out.println(JSON.toJSONString(page));
-
-
+        //System.out.println(JSON.toJSONString(page));
+        List<Page> pages = new ArrayList<>();
+        pages.add(page);
+        return Application.parseFromPages(pages);
     }
 
     private void registComponentParser() {

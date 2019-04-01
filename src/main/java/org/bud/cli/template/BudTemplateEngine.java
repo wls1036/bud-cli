@@ -273,6 +273,7 @@ public class BudTemplateEngine {
                 if (!name.startsWith("get")) {
                     continue;
                 }
+                System.out.println(name);
                 name = name.substring(3);
                 try {
                     this.engineData.put(name.substring(0, 1).toLowerCase() + name.substring(1), m.invoke(ob));
