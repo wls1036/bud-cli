@@ -1,6 +1,8 @@
 package org.bud.cli;
 
 import com.alibaba.fastjson.JSON;
+import github.asan.bud.cli.parser.Parser;
+import github.asan.bud.cli.parser.component.ComponentReader;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
@@ -10,7 +12,6 @@ import org.bud.cli.component.Button;
 import org.bud.cli.component.Menu;
 import org.bud.cli.component.MenuItem;
 import org.bud.cli.component.QueryPage;
-import org.bud.cli.parser.Controller;
 import org.bud.cli.template.BudTemplateEngine;
 
 import java.io.StringWriter;
@@ -27,15 +28,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] cmd) {
-        Controller controller = new Controller();
-        Object data=controller.run();
-
-        Main.test01(data);
-//
-//        BudTemplateEngine e = new BudTemplateEngine();
-//        e.evaluateFromZip("m.zip", "bb");
-
-//        test01();
+        Parser parser=new Parser();
+        parser.parser();
     }
 
     public static void templateEngine() {

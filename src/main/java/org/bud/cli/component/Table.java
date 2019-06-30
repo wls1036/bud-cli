@@ -1,7 +1,5 @@
 package org.bud.cli.component;
 
-import com.sun.tools.javac.util.List;
-
 /**
  * @Copyright: Shanghai Definesys Company.All rights reserved.
  * @Description:

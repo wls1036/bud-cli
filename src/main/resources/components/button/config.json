@@ -1,0 +1,26 @@
+{
+  "names": [
+    "按钮",
+    "button"
+  ],
+  "attributes": [
+    {
+      "names": [
+        "code",
+        "编码"
+      ],
+      "pattern": {
+        "regx": "^\\w$"
+      }
+    },
+    {
+      "names": [
+        "name",
+        "名称"
+      ],
+      "pattern": {
+        "regx": "^\\w$"
+      }
+    }
+  ]
+}

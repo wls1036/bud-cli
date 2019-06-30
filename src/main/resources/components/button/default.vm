@@ -1,0 +1,14 @@
+#set($greet = 'hello')
+$greet $name
+#foreach($i in $list)
+    $i
+#end
+$name $name
+$name
+\$name
+#if($name1)
+name is not null
+#else
+name is null
+#end
+

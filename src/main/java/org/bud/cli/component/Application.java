@@ -11,6 +11,7 @@ import java.util.List;
  */
 public class Application {
     private List<MenuItem> menuItems;
+    private List<Page> pages;
 
     public List<MenuItem> getMenuItems() {
         return menuItems;
@@ -30,6 +31,15 @@ public class Application {
                 }
             }
         }
+        app.setPages(pages);
         return app;
+    }
+
+    public List<Page> getPages() {
+        return pages;
+    }
+
+    public void setPages(List<Page> pages) {
+        this.pages = pages;
     }
 }

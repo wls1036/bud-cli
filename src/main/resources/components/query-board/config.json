@@ -1,0 +1,37 @@
+{
+  "names": [
+    "查询面板",
+    "查询框",
+    "search"
+  ],
+  "defaultChildType": "input",
+  "attributes": [
+    {
+      "names": [
+        "code",
+        "编码"
+      ],
+      "pattern": {
+        "regx": "^\\w$"
+      }
+    },
+    {
+      "names": [
+        "name",
+        "名称"
+      ],
+      "pattern": {
+        "regx": "^\\w$"
+      }
+    },
+    {
+      "names": [
+        "路径",
+        "uri"
+      ],
+      "pattern": {
+        "regx": "^/"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "names": [
+    "page",
+    "页面"
+  ],
+  "attributes": [
+    {
+      "names": [
+        "code",
+        "编码"
+      ],
+      "pattern": {
+        "regx": "^\\w$"
+      }
+    },
+    {
+      "names": [
+        "name",
+        "名称"
+      ],
+      "pattern": {
+        "regx": "^\\w$"
+      }
+    }
+  ]
+}

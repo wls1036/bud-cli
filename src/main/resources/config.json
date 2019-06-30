@@ -1,0 +1,719 @@
+[
+  {
+    "attributes": {},
+    "childs": [
+      {
+        "attributes": {},
+        "childs": [
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "attrPatterns": {
+                "code": {},
+                "name": {
+                  "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+                },
+                "名称": {
+                  "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+                },
+                "编码": {
+                  "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+                }
+              },
+              "name": "input",
+              "theamTemplates": {
+                "default": {
+                  "content": "$name"
+                }
+              }
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "姓名-编号",
+                "fragment": false,
+                "line": "- 姓名-编号",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          },
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "attrPatterns": {
+                "code": {
+                  "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+                },
+                "name": {
+                  "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+                },
+                "名称": {
+                  "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+                },
+                "编码": {
+                  "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+                }
+              },
+              "name": "日期",
+              "theamTemplates": {
+                "default": {
+                  "content": "$name"
+                }
+              }
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "日期-出生年月",
+                "fragment": false,
+                "line": "- 日期-出生年月",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          },
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "$ref": "$[0].childs[0].childs[0].componentType"
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "邮箱",
+                "fragment": false,
+                "line": "- 邮箱",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          }
+        ],
+        "componentType": {
+          "attrPatterns": {
+            "code": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "name": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "uri": {},
+            "名称": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "编码": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "路径": {
+              "$ref": "$[0].childs[0].componentType.attrPatterns.uri"
+            }
+          },
+          "defaultChildType": {
+            "$ref": "$[0].childs[0].childs[0].componentType"
+          },
+          "name": "查询框",
+          "theamTemplates": {
+            "default": {
+              "content": "$name"
+            }
+          }
+        },
+        "rawLines": [
+          {
+            "component": false,
+            "container": true,
+            "content": "查询框",
+            "fragment": false,
+            "line": "#查询框",
+            "page": false,
+            "remark": false,
+            "systemConfig": false
+          },
+          {
+            "$ref": "$[0].childs[0].childs[0].rawLines[0]"
+          },
+          {
+            "$ref": "$[0].childs[0].childs[1].rawLines[0]"
+          },
+          {
+            "$ref": "$[0].childs[0].childs[2].rawLines[0]"
+          }
+        ]
+      },
+      {
+        "attributes": {},
+        "childs": [
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "attrPatterns": {
+                "code": {
+                  "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+                },
+                "name": {
+                  "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+                },
+                "名称": {
+                  "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+                },
+                "编码": {
+                  "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+                }
+              },
+              "name": "button",
+              "theamTemplates": {
+                "default": {
+                  "content": "#set($greet = 'hello')\n$greet $name\n#foreach($i in $list)\n    $i\n#end\n$name $name\n$name\n\\$name\n#if($name1)\nname is not null\n#else\nname is null\n#end\n\n"
+                }
+              }
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "添加",
+                "fragment": false,
+                "line": "- 添加",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          },
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "$ref": "$[0].childs[1].childs[0].componentType"
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "删除",
+                "fragment": false,
+                "line": "- 删除",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          },
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "$ref": "$[0].childs[1].childs[0].componentType"
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "编辑",
+                "fragment": false,
+                "line": "- 编辑",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          }
+        ],
+        "componentType": {
+          "attrPatterns": {
+            "code": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "name": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "名称": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "编码": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            }
+          },
+          "defaultChildType": {
+            "$ref": "$[0].childs[1].childs[0].componentType"
+          },
+          "name": "操作",
+          "theamTemplates": {
+            "default": {
+              "content": "$name"
+            }
+          }
+        },
+        "rawLines": [
+          {
+            "component": false,
+            "container": true,
+            "content": "操作",
+            "fragment": false,
+            "line": "# 操作",
+            "page": false,
+            "remark": false,
+            "systemConfig": false
+          },
+          {
+            "$ref": "$[0].childs[1].childs[0].rawLines[0]"
+          },
+          {
+            "$ref": "$[0].childs[1].childs[1].rawLines[0]"
+          },
+          {
+            "$ref": "$[0].childs[1].childs[2].rawLines[0]"
+          }
+        ]
+      },
+      {
+        "attributes": {},
+        "childs": [
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "$ref": "$[0].childs[0].childs[0].componentType"
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "姓名",
+                "fragment": false,
+                "line": "- 姓名",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          },
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "$ref": "$[0].childs[0].childs[0].componentType"
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "年龄",
+                "fragment": false,
+                "line": "- 年龄",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          },
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "$ref": "$[0].childs[0].childs[0].componentType"
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "出生年月",
+                "fragment": false,
+                "line": "- 出生年月",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          }
+        ],
+        "componentType": {
+          "attrPatterns": {
+            "code": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "name": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "名称": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "编码": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            }
+          },
+          "defaultChildType": {
+            "$ref": "$[0].childs[0].childs[0].componentType"
+          },
+          "name": "表格",
+          "theamTemplates": {
+            "default": {
+              "content": ""
+            }
+          }
+        },
+        "rawLines": [
+          {
+            "component": false,
+            "container": true,
+            "content": "表格",
+            "fragment": false,
+            "line": "# 表格",
+            "page": false,
+            "remark": false,
+            "systemConfig": false
+          },
+          {
+            "$ref": "$[0].childs[2].childs[0].rawLines[0]"
+          },
+          {
+            "$ref": "$[0].childs[2].childs[1].rawLines[0]"
+          },
+          {
+            "$ref": "$[0].childs[2].childs[2].rawLines[0]"
+          }
+        ]
+      },
+      {
+        "attributes": {},
+        "childs": [
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "$ref": "$[0].childs[0].childs[0].componentType"
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "我的草稿->>草稿(引用片段)",
+                "fragment": false,
+                "line": "- 我的草稿->>草稿(引用片段)",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          },
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "$ref": "$[0].childs[0].childs[0].componentType"
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "我的待办->>页面(引用片段)",
+                "fragment": false,
+                "line": "- 我的待办->>页面(引用片段)",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          }
+        ],
+        "componentType": {
+          "attrPatterns": {
+            "code": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "name": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "名称": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "编码": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            }
+          },
+          "defaultChildType": {
+            "$ref": "$[0].childs[0].childs[0].componentType"
+          },
+          "name": "tab页",
+          "theamTemplates": {
+            "default": {
+              "content": ""
+            }
+          }
+        },
+        "rawLines": [
+          {
+            "component": false,
+            "container": true,
+            "content": "tab页",
+            "fragment": false,
+            "line": "# tab页",
+            "page": false,
+            "remark": false,
+            "systemConfig": false
+          },
+          {
+            "$ref": "$[0].childs[3].childs[0].rawLines[0]"
+          },
+          {
+            "$ref": "$[0].childs[3].childs[1].rawLines[0]"
+          }
+        ]
+      },
+      {
+        "attributes": {},
+        "childs": [],
+        "componentType": {
+          "attrPatterns": {
+            "code": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "name": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "名称": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "编码": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            }
+          },
+          "defaultChildType": {
+            "$ref": "$[0].childs[0].childs[0].componentType"
+          },
+          "name": "fragment",
+          "theamTemplates": {
+            "default": {
+              "content": ""
+            }
+          }
+        },
+        "rawLines": [
+          {
+            "component": false,
+            "container": false,
+            "content": "草稿片段",
+            "fragment": true,
+            "line": ">>草稿片段",
+            "page": false,
+            "remark": false,
+            "systemConfig": false
+          }
+        ]
+      },
+      {
+        "attributes": {},
+        "childs": [
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "$ref": "$[0].childs[0].childs[0].componentType"
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "姓名-编号",
+                "fragment": false,
+                "line": "- 姓名-编号",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          },
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "$ref": "$[0].childs[0].childs[1].componentType"
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "日期-出生年月",
+                "fragment": false,
+                "line": "- 日期-出生年月",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          },
+          {
+            "attributes": {},
+            "childs": [],
+            "componentType": {
+              "$ref": "$[0].childs[0].childs[0].componentType"
+            },
+            "rawLines": [
+              {
+                "component": true,
+                "container": false,
+                "content": "初审",
+                "fragment": false,
+                "line": "- 初审",
+                "page": false,
+                "remark": false,
+                "systemConfig": false
+              }
+            ]
+          }
+        ],
+        "componentType": {
+          "attrPatterns": {
+            "code": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "name": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "名称": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            },
+            "编码": {
+              "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+            }
+          },
+          "defaultChildType": {
+            "$ref": "$[0].childs[0].childs[0].componentType"
+          },
+          "name": "表单",
+          "theamTemplates": {
+            "default": {
+              "content": "$name"
+            }
+          }
+        },
+        "rawLines": [
+          {
+            "component": false,
+            "container": true,
+            "content": "表单",
+            "fragment": false,
+            "line": "#表单",
+            "page": false,
+            "remark": false,
+            "systemConfig": false
+          },
+          {
+            "$ref": "$[0].childs[5].childs[0].rawLines[0]"
+          },
+          {
+            "$ref": "$[0].childs[5].childs[1].rawLines[0]"
+          },
+          {
+            "$ref": "$[0].childs[5].childs[2].rawLines[0]"
+          }
+        ]
+      }
+    ],
+    "componentType": {
+      "attrPatterns": {
+        "code": {
+          "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+        },
+        "name": {
+          "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+        },
+        "名称": {
+          "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+        },
+        "编码": {
+          "$ref": "$[0].childs[0].childs[0].componentType.attrPatterns.code"
+        }
+      },
+      "name": "page",
+      "theamTemplates": {
+        "default": {
+          "content": ""
+        }
+      }
+    },
+    "rawLines": [
+      {
+        "component": false,
+        "container": false,
+        "content": "我的待办",
+        "fragment": false,
+        "line": ">我的待办",
+        "page": true,
+        "remark": false,
+        "systemConfig": false
+      },
+      {
+        "$ref": "$[0].childs[0].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[0].childs[0].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[0].childs[1].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[0].childs[2].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[1].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[1].childs[0].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[1].childs[1].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[1].childs[2].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[2].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[2].childs[0].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[2].childs[1].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[2].childs[2].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[3].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[3].childs[0].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[3].childs[1].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[4].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[5].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[5].childs[0].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[5].childs[1].rawLines[0]"
+      },
+      {
+        "$ref": "$[0].childs[5].childs[2].rawLines[0]"
+      }
+    ]
+  }
+]

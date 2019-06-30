@@ -93,7 +93,7 @@ public class BudTemplateEngine {
         to = this.evaluatePath(to);
         this.mkdir(to);
         String toFile = this.getTargetFileName(file.getPath(), to);
-        String tpl = BudUtil.readTemplateText(file);
+        String tpl = BudUtil.readText(file);
         this.evaluate(tpl, this.engineData, toFile);
     }
 
