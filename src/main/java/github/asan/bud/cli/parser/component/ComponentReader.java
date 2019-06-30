@@ -2,8 +2,8 @@ package github.asan.bud.cli.parser.component;
 
 
 import com.alibaba.fastjson.JSON;
-import org.bud.cli.exception.BudException;
-import org.bud.cli.util.BudUtil;
+import github.asan.bud.cli.exception.BudException;
+import github.asan.bud.cli.util.BudUtil;
 
 import java.io.File;
 import java.util.HashMap;

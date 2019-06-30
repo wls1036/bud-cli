@@ -13,7 +13,7 @@ import github.asan.bud.cli.parser.page.PageReader;
 import github.asan.bud.cli.pattern.AttrPattern;
 import github.asan.bud.cli.pattern.AttrPatternFactory;
 import github.asan.bud.cli.util.KeyValue;
-import org.bud.cli.util.BudUtil;
+import github.asan.bud.cli.util.BudUtil;
 
 import java.util.ArrayList;
 import java.util.List;

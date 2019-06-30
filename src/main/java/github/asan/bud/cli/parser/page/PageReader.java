@@ -1,8 +1,7 @@
 package github.asan.bud.cli.parser.page;
 
 import github.asan.bud.cli.component.Component;
-import github.asan.bud.cli.component.ComponentType;
-import org.bud.cli.util.BudUtil;
+import github.asan.bud.cli.util.BudUtil;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package org.bud.cli.exception;
+package github.asan.bud.cli.exception;
 
 /**
  * @Copyright: Shanghai Definesys Company.All rights reserved.

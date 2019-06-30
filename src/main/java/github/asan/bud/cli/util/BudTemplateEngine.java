@@ -1,12 +1,12 @@
-package org.bud.cli.template;
+package github.asan.bud.cli.util;
 
 import com.alibaba.fastjson.JSON;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.runtime.RuntimeConstants;
 import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
-import org.bud.cli.exception.BudException;
-import org.bud.cli.util.BudUtil;
+import github.asan.bud.cli.exception.BudException;
+import github.asan.bud.cli.util.BudUtil;
 
 import java.io.*;
 import java.lang.reflect.Method;

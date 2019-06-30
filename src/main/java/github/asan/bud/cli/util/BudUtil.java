@@ -1,7 +1,7 @@
-package org.bud.cli.util;
+package github.asan.bud.cli.util;
 
 import github.asan.bud.cli.parser.page.PageLine;
-import org.bud.cli.exception.BudException;
+import github.asan.bud.cli.exception.BudException;
 
 import java.io.*;
 import java.lang.reflect.Method;

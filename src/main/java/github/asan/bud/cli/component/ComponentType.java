@@ -1,15 +1,9 @@
 package github.asan.bud.cli.component;
 
 import github.asan.bud.cli.parser.component.ComponentTemplate;
-import github.asan.bud.cli.parser.page.PageLine;
 import github.asan.bud.cli.pattern.AttrPattern;
-import github.asan.bud.cli.render.RenderResult;
-import github.asan.bud.cli.util.KeyValue;
-import org.bud.cli.util.BudUtil;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
